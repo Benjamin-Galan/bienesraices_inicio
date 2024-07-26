@@ -4,6 +4,24 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function darkMode(){
+    const preferencia = window.matchMedia('(prefers-color-scheme: dark)');
+    // console.log(preferencia.matches);
+
+    //leer las preferencias del sistema
+    if(preferencia.matches){
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+
+    preferencia.addEventListener('change', function(){
+        if(preferencia.matches){
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    })
+
     const botonDarkMode = document.querySelector('.dark-mode-boton');
 
     botonDarkMode.addEventListener('click', function(){
