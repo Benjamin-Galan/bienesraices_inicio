@@ -7,8 +7,19 @@
         padding-top: calc($separacion / 2);
     }
 
+    .navegacion{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        height: auto;
+
+        @include tablet{
+            display: flex;
+        }
+    }
+
     .copyright{
         color: $blanco;
         text-align: center;
     }
-}
+}   
