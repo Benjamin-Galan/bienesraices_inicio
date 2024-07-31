@@ -1,5 +1,6 @@
 <?php
-include './includes/templates/header.php';
+include '/includes/funciones.php';
+incluirTemplate('header');
 ?>
 
 <main class="contenedor seccion">
@@ -7,5 +8,5 @@ include './includes/templates/header.php';
 </main>
 
 <?php
-include './includes/templates/header.php';
+incluirTemplate('footer');
 ?>
