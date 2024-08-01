@@ -1,19 +1,18 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienes Raices</title>
     <link rel="stylesheet" href="/bienesraices/build/css/app.css">
 </head>
-
 <body>
-    <header class="header <?php echo $inicio ? 'inicio' : ''; ?>">
+    
+    <header class="header<?php echo $inicio ? 'inicio' : ''; ?>">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="/bienesraices/index.php ">
-                    <img src="/bienesraices/build/img/logo.svg" alt="Imagen de fondo">
+                <a href="/bienesraices/index.php">
+                    <img src="/bienesraices/build/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
 
                 <div class="mobile-menu">
@@ -21,15 +20,17 @@
                 </div>
 
                 <div class="derecha">
-                    <img class="dark-mode-boton" src="/bienesraices/build/img/dark-mode.svg" alt="boton dark mode">
+                    <img class="dark-mode-boton" src="/bienesraices/build/img/dark-mode.svg">
                     <nav class="navegacion">
-                        <a href="nosotros.php">Nosotros</a>
-                        <a href="anuncios.php">Anuncios</a>
-                        <a href="blog.php">Blog</a>
-                        <a href="contacto.php">Contacto</a>
+                        <a href="nosotros.html">Nosotros</a>
+                        <a href="anuncios.html">Anuncios</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contacto.html">Contacto</a>
                     </nav>
                 </div>
-            </div><!--barra-->
+   
+                
+            </div> <!--.barra-->
 
             <?php if ($inicio) { ?>
                 <h1>Venta de casas y departamentos exclusivos de lujo</h1>
