@@ -141,10 +141,10 @@ incluirTemplate('header');
             <label for="titulo">Titulo de la propiedad</label>
             <input type="text" id="titulo" name="titulo" placeholder="Titulo propiedad" value="<?php echo $titulo ?>">
 
-            <label for="precio">Tilulo de la propiedad</label>
+            <label for="precio">Precio de la propiedad</label>
             <input type="number" id="precio" name="precio" placeholder="Precio propiedad" value="<?php echo $precio ?>">
 
-            <label for="imagen">Tilulo de la propiedad</label>
+            <label for="imagen">Imagen de la propiedad</label>
             <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen">
 
             <label for="descripcion">Descripcion</label>
