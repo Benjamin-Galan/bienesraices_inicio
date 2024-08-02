@@ -1,9 +1,13 @@
 <?php
 //importar la conexion
+require '../includes/config/database.php';
+$db = conectarDB();
 
 //escribir el query
+$query = "SELECT * FROM propiedades";
 
 //consultar la bd
+$resultadoConsulta = mysqli_query($db, $query);
 
 //muestra mensaje condicional
 $resultado = $_GET['resultado'] ?? null;
@@ -34,20 +38,25 @@ incluirTemplate('header');
         </thead>
 
         <tbody> <!-- mostrar los resultados -->
+            <?php while ($propiedad = mysqli_fetch_assoc($resultadoConsulta)) : ?>
             <tr>
-                <td>1</td>
-                <td>Casa en la playa</td>
-                <td><img src="/bienesraices/imagenes/anuncio2.jpg" class="imagen-tabla" alt=""></td>
-                <td>$12000000</td>
+                <td><?php echo $propiedad['id']?></td>
+                <td><?php echo $propiedad['titulo']?></td>
+                <td><img src="/bienesraices/imagenes/<?php echo $propiedad['imagen'];?>" class="imagen-tabla" alt=""></td>
+                <td>$<?php echo $propiedad['precio'];?></td>
                 <td>
                     <a class="boton-rojo-block" href="">Eliminar</a>
                     <a class="boton-amarillo-block" href="">Actualizar</a>
                 </td>
             </tr>
+            <?php endwhile; ?>
         </tbody>
     </table>
 </main>
 
 <?php
+//cerrar la conexion
+mysqli_close($db);
+
 incluirTemplate('footer');
 ?>
