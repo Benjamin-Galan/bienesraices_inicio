@@ -1,36 +1,49 @@
-.alerta{
+.alerta {
     padding: 0.5rem;
     text-align: center;
     color: $blanco;
     font-weight: $bold;
     text-transform: uppercase;
     margin: 1rem 0;
-    
-    &.error{
+    opacity: 1;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: visibility 2s ease-in-out, opacity 2s linear, max-height 2s ease-out;
+
+    &.error {
         background-color: $rojo;
     }
 
-    &.exito{
+    &.exito {
         background-color: $verde;
     }
 }
 
-table.propiedades{
+.ocultar {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+}
+
+table.propiedades {
     margin-top: 4rem;
     width: 100%;
     border-spacing: 0;
 
-    thead{
+    thead {
         background-color: $verde;
 
-        th{
+        th {
             color: $blanco;
             padding: 2rem;
         }
     }
 
-    .imagen-tabla{
+    .imagen-tabla {
         width: 10rem;
     }
 }
 
+.imagen-pequeña {
+    width: 20rem;
+}
