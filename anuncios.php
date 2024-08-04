@@ -31,7 +31,7 @@ include './includes/templates/header.php';
                     </li>
                 </ul>
 
-                <a href="anuncio.html" class="boton-amarillo-block">Ver propiedad</a>
+                <a href="anuncio.php" class="boton-amarillo-block">Ver propiedad</a>
             </div> <!--.contenido-anuncio-->
         </div><!--.anuncio-->
 
