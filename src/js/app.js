@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(){
     eventListeners();
+    ocultarMensaje();
     darkMode();
+    
 });
 
 function darkMode(){
@@ -45,4 +47,13 @@ function navegacionResponsive(){
     }
     //o bien el soguiente codigo que si encuentra una clase la elimina
     // navegacion.classList.toggle('mostrar');
+}
+
+function ocultarMensaje() {
+    var mensaje = document.querySelector('.mensaje');
+    if (mensaje) {
+        setTimeout(function() {
+            mensaje.classList.add('ocultar');
+        }, 3000); // 3000 milisegundos = 3 segundos
+    }
 }
