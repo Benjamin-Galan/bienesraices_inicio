@@ -21,15 +21,6 @@ $vendedorId = $_POST[''];
 
 //ejecutar el codigo despues de que el usuario envia el formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // echo '<pre>';
-    // var_dump($_POST);
-    // echo '</pre>';
-
-    echo '<pre>';
-    var_dump($_FILES);
-    echo '</pre>';
-
-    // exit;
 
     $titulo = mysqli_real_escape_string($db, $_POST['titulo']);
     $precio = mysqli_real_escape_string($db, $_POST['precio']);
@@ -81,11 +72,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if($imagen['size'] > $medida){
         $errores[] = "La imagen es muy pesada";
     }
-
-
-    // echo '<pre>';
-    // var_dump($errores);
-    // echo '</pre>';
 
     //si el arreglo está vacio ingresa los datos a la bd
     if (empty($errores)) {
