@@ -1,6 +1,11 @@
 <?php
+require '../includes/funciones.php';
+$auth = estaAutenticado();
 
-//importar la conexion
+if (!$auth) {
+    header('location: /bienesraices/index.php');
+}
+
 require '../includes/config/database.php';
 $db = conectarDB();
 
@@ -28,13 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $resultado = mysqli_query($db, $consulta);
 
         if ($resultado) {
-            header('Location: /bienesraices/admin/index.php?resultado=3');
+            header('Location: /bienesraices/admin/index.php');
         }
     }
 }
 
 //incluye un template
-include '../includes/funciones.php';
 incluirTemplate('header');
 ?>
 

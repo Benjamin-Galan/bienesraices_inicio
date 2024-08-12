@@ -1,4 +1,15 @@
-    <!DOCTYPE html>
+<?php
+
+//si la sesion no esta iniciada, se inicia
+if(!isset($_SESSION)){
+    session_start();
+}
+
+//si no está autenticado se agrega null
+$auth = $_SESSION['login'] ?? null;
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,6 +37,10 @@
                         <a href="/bienesraices/anuncios.php">Anuncios</a>
                         <a href="/bienesraices/blog.php">Blog</a>
                         <a href="/bienesraices/contacto.php">Contacto</a>
+                        <?php
+                        if($auth): ?>
+                        <a href="cerrar-sesion.php">Cerrar sesion</a>
+                        <?php endif;?>
                     </nav>
                 </div>
    
