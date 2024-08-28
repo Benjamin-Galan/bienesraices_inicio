@@ -1,5 +1,6 @@
 <?php
-include './includes/templates/header.php';
+include '/includes/app.php';
+incluirTemplate('header');
 ?>
 
 <main class="contenedor seccion contenido-centrado">
@@ -15,7 +16,7 @@ include './includes/templates/header.php';
         </div>
 
         <div class="texto-entrada">
-            <a href="entrada.html">
+            <a href="entrada.php">
                 <h4>Terraza en el techo de tu casa</h4>
                 <p class="informacion-meta">Escrito el <span>20/10/24</span> por: <span>Admin</span></p>
                 <p>
@@ -36,7 +37,7 @@ include './includes/templates/header.php';
         </div>
 
         <div class="texto-entrada">
-            <a href="entrada.html">
+            <a href="entrada.php">
                 <h4>Guia para la decoracion de tu hogar</h4>
                 <p class="informacion-meta">Escrito el <span>20/10/24</span> por: <span>Admin</span></p>
                 <p>
@@ -57,7 +58,7 @@ include './includes/templates/header.php';
         </div>
 
         <div class="texto-entrada">
-            <a href="entrada.html">
+            <a href="entrada.php">
                 <h4>Terraza en el techo de tu casa</h4>
                 <p class="informacion-meta">Escrito el <span>20/10/24</span> por: <span>Admin</span></p>
                 <p>
