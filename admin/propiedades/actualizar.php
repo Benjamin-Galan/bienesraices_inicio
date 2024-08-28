@@ -1,26 +1,22 @@
 <?php
 
-require '../../includes/funciones.php';
-$auth = estaAutenticado();
+use App\Propiedad;
 
-if (!$auth) {
-    header('location: /');
-}
+require '../../includes/app.php';
+estaAutenticado();
+
 
 $id = $_GET['id'];
 $id = filter_var($id, FILTER_VALIDATE_INT);
-echo $id;
+
 if (!$id) {
-    header('Location: /bienesraices/admin/index.php');
+    header('Location: /admin');
 }
 
-require '../../includes/config/database.php';
-$db = conectarDB();
+$propiedad = Propiedad::find($id);
 
-//obtener los datos de la propiedad
-$consulta = "SELECT * FROM propiedades WHERE id = {$id}";
-$resultado = mysqli_query($db, $consulta);
-$propiedad = mysqli_fetch_assoc($resultado);
+
+debugear($propiedad);
 
 //consultar para obtener los vendedores
 $consulta = "SELECT * FROM vendedores;";
