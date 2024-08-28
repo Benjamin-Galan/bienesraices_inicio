@@ -159,6 +159,8 @@ class Propiedad
     public static function find($id){
         $query = "SELECT * FROM propiedades WHERE id = {$id}";
         $resultado = self::consultarSQL($query);
+
+        //retorna el primer elemento de un arreglo
         return array_shift($resultado);
     }
 
