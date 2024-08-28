@@ -7,8 +7,9 @@ if(!$id){
     header('location: /bienesraices/index.php');
 }
 
+require 'includes/app.php';
+
 //importar la conexion
-require __DIR__ . '/includes/config/database.php';
 $db = conectarDB();
 
 //obtener los resultados
@@ -20,9 +21,9 @@ if (!$resultado->num_rows){
 }
 $propiedad = mysqli_fetch_assoc($resultado);
 
-include 'includes/funciones.php';
 incluirTemplate('header');
 ?>
+
 <main class="contenedor seccion contenido-centrado">
     <h1><?php echo $propiedad['titulo']; ?></h1>
 

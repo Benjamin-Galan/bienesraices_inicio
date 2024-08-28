@@ -1,5 +1,6 @@
 <?php
-include './includes/templates/header.php';
+include '/includes/app.php';
+incluirTemplate('header');
 ?>
 
 <main class="contenedor seccion contenido-centrado">
