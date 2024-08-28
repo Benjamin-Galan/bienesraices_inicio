@@ -1,8 +1,6 @@
 <?php
-
-require 'includes/funciones.php';
+require 'includes/app.php';
 incluirTemplate('header', $inicio = true);
-
 ?>
 
 <main class="contenedor seccion">
@@ -42,7 +40,7 @@ incluirTemplate('header', $inicio = true);
     ?>
 
     <div class="ver-todas">
-        <a href="anuncios.html" class="boton-verde">Ver todas</a>
+        <a href="/anuncios.php" class="boton-verde">Ver todas</a>
     </div>
 </section>
 
